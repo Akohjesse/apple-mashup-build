@@ -28,6 +28,18 @@
                 src="https://www.apple.com/105/media/us/apple-watch-ultra/2022/4d9e62e1-fe94-4bb9-abbe-0b8c9626a304/anim/light-pass/medium_2x.mp4"
             ></video>
         </div>
+        <div class="watchultra_tolove child_wrap">
+            <div class="watchultra_tolove_txt">
+                <p>Even more to discover</p>
+             <h1>
+                Everything to love about Apple Watch.
+             </h1>
+             <p class="c_gray">With features that help you stay healthy, safe, and connected, the watch that pushes limits is also one you can wear every day.</p>
+            </div>
+            <div data-scroll-speed="2" data-scroll class="img mg_au">
+                <img src="../assets/everything_hero.jpeg" alt="">
+            </div>
+        </div>
         <div class="watchultra_nightmode">
             <div class="watchultra_nightmode_wrap child_wrap">
                 <p>
@@ -136,6 +148,22 @@ onMounted(() => {
             video {
                 width: 90%;
             }
+        }
+    }
+    &_tolove{
+        overflow: hidden;
+        height: 77rem;
+        padding-top: 15rem;
+        @include flex_col(9rem);
+        &_txt{
+            @include flex_col(2rem);
+            p{
+                font-size: toRem(26);
+                max-width:55%;
+            }
+        }
+        .img{
+            width:35rem;
         }
     }
 }
