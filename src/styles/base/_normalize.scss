@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: calc(100vw / 1440 * 16);
+    @include media("<=tablet") {
+         font-size: calc(100vw / 475 * 10);
+    }
+    @include media("<=phone-tab") {
+         font-size: calc(100vw / 375 * 14);
+    }
+}
+body {
+    
+}
+h1 {
+
+}
+h3 {
+
+}
+section {
+    width: 100%;
+}
+button {
+
+}
+p {
+ 
+}
+input {
+  
+}
+::-webkit-scrollbar {
+    display: none;
+}
+::placeholder {
+   
+}

@@ -1,0 +1,26 @@
+@mixin flex($jc, $ai, $gap) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $gap;
+}
+
+@mixin txtheader($color) {
+    font-size: 120px;
+    color: $color;
+    line-height: 0.8;
+    font-weight: 600;
+    letter-spacing: -0.0018em;
+}
+
+@mixin flexcol($gap) {
+    flex-direction: column;
+    display: flex;
+    gap: $gap;
+}
+@mixin label_btn() {
+    padding: 0.8rem;
+    border-radius: 1.5rem;
+    width: 4.8rem;
+    @content;
+}
