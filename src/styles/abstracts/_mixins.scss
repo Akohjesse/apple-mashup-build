@@ -13,7 +13,7 @@
     letter-spacing: -0.0018em;
 }
 
-@mixin flexcol($gap) {
+@mixin flex_col($gap) {
     flex-direction: column;
     display: flex;
     gap: $gap;
@@ -23,4 +23,9 @@
     border-radius: 1.5rem;
     width: 4.8rem;
     @content;
+}
+
+@function toRem($value) {
+    $remValue: (calc($value / 16)) + rem;
+    @return $remValue;
 }
