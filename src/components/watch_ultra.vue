@@ -31,13 +31,13 @@
         <div class="watchultra_tolove child_wrap">
             <div class="watchultra_tolove_txt">
                 <p>Even more to discover</p>
-             <h1>
-                Everything to love about Apple Watch.
-             </h1>
-             <p class="c_gray">With features that help you stay healthy, safe, and connected, the watch that pushes limits is also one you can wear every day.</p>
+                <h1>Everything to love about Apple Watch.</h1>
+                <p class="c_gray">
+                    With features that help you stay healthy, safe, and connected, the watch that pushes limits is also one you can wear every day.
+                </p>
             </div>
-            <div data-scroll-speed="2" data-scroll class="img mg_au">
-                <img src="../assets/everything_hero.jpeg" alt="">
+            <div data-scroll-speed="3" data-scroll class="img mg_au">
+                <img src="../assets/everything_hero.jpeg" alt="" />
             </div>
         </div>
         <div class="watchultra_nightmode">
@@ -55,6 +55,21 @@
                 ></video>
             </div>
         </div>
+        <!-- <div class="watchultra_hardware">
+            <div class="child_wrap">
+                <p>
+                    Ready for Action. The new Action button gives you quick, physical control over a variety of functions. It’s customizable and can
+                    do things like control a workout, mark a Compass Waypoint, or begin a dive. Just like you, it’s full of potential.
+                </p>
+
+                <div class="watchultra_hardware_magic">
+                    <div class="img">
+                        <img src="../assets/design_ready.jpeg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div ref="change" class="change"></div>
+        </div> -->
     </div>
 </template>
 
@@ -62,6 +77,7 @@
 import { ref } from "@vue/reactivity";
 import { onMounted } from "@vue/runtime-core";
 import { IO } from "../animation/observe";
+import gsap from "gsap";
 const dpd_vid = ref(null);
 const nightmode_vid = ref(null);
 
@@ -117,7 +133,7 @@ onMounted(() => {
         }
     }
     &_dpd {
-        background: #f7f7f7;
+        background: $fadewhite;
         width: 100%;
         padding-top: 6rem;
         @include flex_col(8rem);
@@ -134,7 +150,7 @@ onMounted(() => {
         }
     }
     &_nightmode {
-        background-color: #f7f7f7;
+        background-color: $fadewhite;
         color: #86868b;
         transition: background-color 1s cubic-bezier(0.2, 0, 0.8, 1) 1.2s;
         padding-top: 9rem;
@@ -150,21 +166,44 @@ onMounted(() => {
             }
         }
     }
-    &_tolove{
+    &_tolove {
         overflow: hidden;
         height: 77rem;
-        padding-top: 15rem;
+        padding-top: 12rem;
         @include flex_col(9rem);
-        &_txt{
+        &_txt {
             @include flex_col(2rem);
-            p{
+            p {
                 font-size: toRem(26);
-                max-width:55%;
+                max-width: 55%;
             }
         }
-        .img{
-            width:35rem;
+        .img {
+            width: 35rem;
         }
     }
+    // &_hardware {
+    //     padding-top: 7rem;
+    //     &_magic {
+    //         width: 100%;
+    //         height: 30rem;
+    //         overflow-y: hidden;
+    //         .img {
+    //             width: 63rem;
+    //             margin: 0 auto;
+    //         }
+    //     }
+    //     .change {
+    //         background-color: $fadewhite;
+    //         height: 45rem;
+    //         width: 100%;
+    //         z-index: 20;
+    //         background-image: url(../assets/design_features_left_static.jpeg);
+    //         background-size: 60rem;
+    //         background-position: center bottom;
+    //         background-repeat: no-repeat;
+    //         background-attachment: fixed;
+    //     }
+    // }
 }
 </style>
