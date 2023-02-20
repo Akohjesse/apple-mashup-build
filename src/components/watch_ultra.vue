@@ -93,6 +93,11 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+h1 {
+    font-weight: 700;
+    font-size: toRem(110);
+    line-height: 7rem;
+}
 .dark {
     background-color: #000 !important;
     color: #86868b;
