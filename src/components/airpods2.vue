@@ -14,16 +14,20 @@
                 <img src="../assets/music_album_stack.jpeg" alt="" />
                 <img
                     data-scroll
-                    data-scroll-speed="2"
-                    data-scroll-direction="horizontal"
-                    data-scroll-delay="1"
+                    data-scroll-speed="1"
+                    data-scroll-direction="vertical"
+                    data-scroll-delay="0.5"
                     class="abs"
                     src="../assets/giveeon.jpeg"
                     alt=""
                 />
                 <img data-scroll data-scroll-speed="2" data-scroll-delay="1" class="abs" src="../assets/music_airpods_left.png" alt="" />
-                <img data-scroll data-scroll-speed="-3" data-scroll-delay="1" class="abs" src="../assets/music_airpods_right.png" alt="" />
+                <img data-scroll data-scroll-speed="-3" class="abs" src="../assets/music_airpods_right.png" alt="" />
             </div>
+        </div>
+        <div class="skew_pods">
+            <img src="../assets/design_01.png" data-scroll data-scroll-speed="5" data-scroll-delay="1" data-scroll-direction="horizontal" alt="" />
+            <img data-scroll data-scroll-speed="-4" data-scroll-direction="horizontal" data-scroll-delay="1" src="../assets/design_02.png" alt="" />
         </div>
     </div>
 </template>
@@ -73,6 +77,19 @@
                     top: 8rem;
                     width: 8rem;
                 }
+            }
+        }
+    }
+    .skew_pods {
+        padding: 6rem;
+        @include flex(center, center, 7rem);
+        img {
+            width: 20rem;
+            &:nth-child(1) {
+                transform: rotateZ(60deg);
+            }
+            &:nth-child(2) {
+                transform: rotateZ(-30deg);
             }
         }
     }

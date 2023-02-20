@@ -2,7 +2,7 @@
 import { onMounted } from "@vue/runtime-core";
 import LocomotiveScroll from "locomotive-scroll";
 import Watch_ultra from "./components/watch_ultra.vue";
-import airpods2 from './components/airpods2.vue'
+import airpods2 from "./components/airpods2.vue";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import gsap from "gsap";
 // gsap.registerPlugin(ScrollTrigger);
