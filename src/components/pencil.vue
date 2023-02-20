@@ -62,7 +62,13 @@
                         </div>
                     </div>
                     <div class="img">
-                        <img src="../assets/apple_pencil_2nd_gen.png" alt="" />
+                        <img class="img_pen" src="../assets/apple_pencil_2nd_gen.png" alt="" />
+                        <div class="img_pointers">
+                            <img class="abs qw" src="../assets/snipe_matte.png" alt="" />
+                            <img class="abs qw" src="../assets/snipe_magnet.png" alt="" />
+                            <img class="abs qw" src="../assets/snipe_tap.png" alt="" />
+                            <img class="abs qw" src="../assets/snipe_pressure_sensitivity.png" alt="" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,9 +148,35 @@
                     }
                 }
                 .img {
+                    position: relative;
                     width: 50%;
-                    img {
+                    background-repeat: no-repeat;
+                    &_pen {
                         width: 12rem;
+                    }
+                    &_pointers {
+                        img {
+                            &:nth-child(1) {
+                                top: 2rem;
+                                left: 6rem;
+                                width: 5.5rem;
+                            }
+                            &:nth-child(2) {
+                                top: 40%;
+                                width: 15rem;
+                                left: 6rem;
+                            }
+                            &:nth-child(3) {
+                                top: 67%;
+                                width: 12rem;
+                                left: 6rem;
+                            }
+                            &:nth-child(4) {
+                                top: 85%;
+                                width: 7rem;
+                                left: 5rem;
+                            }
+                        }
                     }
                 }
             }
