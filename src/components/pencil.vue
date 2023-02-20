@@ -62,7 +62,7 @@
                         </div>
                     </div>
                     <div class="img">
-                        <img class="img_pen" src="../assets/apple_pencil_2nd_gen.png" alt="" />
+                        <img class="img_pen" data-scroll data-scroll-delay="1" data-scroll-speed="3" src="../assets/apple_pencil_2nd_gen.png" alt="" />
                         <div class="img_pointers">
                             <img class="abs qw" src="../assets/snipe_matte.png" alt="" />
                             <img class="abs qw" src="../assets/snipe_magnet.png" alt="" />
@@ -72,6 +72,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="applePencil_art">
+            <img data-scroll data-scroll-speed="4" data-scroll-delay="1" src="../assets/apple_pencil_1st_gen_art.jpeg" alt="">
         </div>
     </div>
 </template>
