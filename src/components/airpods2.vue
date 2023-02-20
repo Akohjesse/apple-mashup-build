@@ -32,7 +32,7 @@
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .airpods2 {
     background: #fafafa;
     .freeMusic {

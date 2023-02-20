@@ -3,6 +3,7 @@ import { onMounted } from "@vue/runtime-core";
 import LocomotiveScroll from "locomotive-scroll";
 import Watch_ultra from "./components/watch_ultra.vue";
 import airpods2 from "./components/airpods2.vue";
+import pencil from "./components/pencil.vue";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import gsap from "gsap";
 // gsap.registerPlugin(ScrollTrigger);
@@ -52,6 +53,7 @@ onMounted(() => {
     <div class="apple_mashup">
         <Watch_ultra />
         <airpods2></airpods2>
+        <pencil></pencil>
     </div>
 </template>
 

@@ -92,7 +92,7 @@ onMounted(() => {
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .dark {
     background-color: #000 !important;
     color: #86868b;
@@ -118,6 +118,8 @@ onMounted(() => {
         p {
             width: 61%;
             margin-bottom: 1.5rem;
+            font-weight: 600;
+            font-size: toRem(24);
         }
         .links {
             @include flex(center, center, 2rem);
