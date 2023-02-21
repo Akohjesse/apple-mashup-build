@@ -56,16 +56,19 @@ onMounted(() => {
 
         setTimeout(() => {
             gsap.to(u, {
-                y: -200,
+                y: -300,
                 autoAlpha: 0,
                 duration: 1,
+                onComplete: () => {
+                    document.querySelector(".ipad_vid_animtext h1").style.display = "none";
+                },
             });
-            document.querySelector(".ipad_vid_animtext h1").style.display = "none";
-
+        }, 2000);
+        setTimeout(() => {
             document.querySelectorAll(".ipad_vid_animtext h2").forEach((e) => {
                 e.style.display = "block";
             });
-        }, 2000);
+        }, 4000);
     });
 });
 </script>
