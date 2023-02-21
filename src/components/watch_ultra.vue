@@ -20,9 +20,10 @@
             </div>
             <video
                 data-scroll
+                autoplay
+                muted
                 data-scroll-speed="-1"
                 ref="dpd_vid"
-                autoplay
                 src="https://www.apple.com/105/media/us/apple-watch-ultra/2022/4d9e62e1-fe94-4bb9-abbe-0b8c9626a304/anim/light-pass/medium_2x.mp4"
             ></video>
         </div>
@@ -52,6 +53,7 @@
                     src="https://www.apple.com/105/media/us/apple-watch-ultra/2022/4d9e62e1-fe94-4bb9-abbe-0b8c9626a304/anim/endurance_face_light-dark/large_2x.webm"
                 ></video>
             </div>
+            <button ref="trigger_btn" class="dg">hdwjkefruiwdokijeuhfg</button>
         </div>
     </div>
 </template>
@@ -62,7 +64,9 @@ import { onMounted } from "@vue/runtime-core";
 import { IO } from "../animation/observe";
 const dpd_vid = ref(null);
 const nightmode_vid = ref(null);
+const trigger_btn = ref(null);
 onMounted(() => {
+    trigger_btn.value.click();
     IO(dpd_vid.value).then(() => {
         dpd_vid.value.play();
     });
@@ -74,6 +78,10 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+.dg {
+    visibility: hidden;
+    opacity: 0;
+}
 h1 {
     font-weight: 700;
     font-size: toRem(110);

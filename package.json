@@ -11,6 +11,7 @@
   "dependencies": {
     "gsap": "^3.11.4",
     "locomotive-scroll": "^4.1.4",
+    "null-responsive-vue": "^1.1.4-alpha",
     "sass": "^1.58.3",
     "splitting": "^1.0.6",
     "vue": "^3.2.45"
