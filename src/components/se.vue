@@ -7,11 +7,11 @@
                 Personal is powerful
             </h1>
             <div class="iPhoneSe_grk_img mg_au">
-                <img src="../assets/se2.png" alt="" />
-                <img src="../assets/se5.png" alt="" />
-                <img src="../assets/se3.png" alt="" />
-                <img src="../assets/se1.png" alt="" />
-                <img src="../assets/se4.png" alt="" />
+                <img data-scroll data-scroll-speed="-2" src="../assets/se2.png" alt="" />
+                <img data-scroll data-scroll-speed="1" src="../assets/se5.png" alt="" />
+                <img data-scroll data-scroll-speed="-1" scroll-delay="-1" src="../assets/se3.png" alt="" />
+                <img data-scroll data-scroll-speed="1" src="../assets/se1.png" alt="" />
+                <img data-scroll data-scroll-speed="-2" scroll-delay="-2" src="../assets/se4.png" alt="" />
             </div>
         </div>
         <div class="iPhoneSe_rfy ta_center">
@@ -115,17 +115,17 @@
             font-weight: 600;
         }
         &_img {
-            width:77%;
-            @include flex(center, start, .8rem);
+            width: 77%;
+            @include flex(center, start, 0.8rem);
             img {
                 width: 14rem;
-                &:nth-child(2){
+                &:nth-child(2) {
                     margin-top: 10rem;
                 }
-                &:nth-child(3){
+                &:nth-child(3) {
                     margin-top: 5rem;
                 }
-                &:nth-child(4){
+                &:nth-child(4) {
                     margin-top: 10rem;
                 }
             }

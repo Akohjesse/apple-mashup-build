@@ -17,12 +17,11 @@
     </header>
 </template>
 
-
 <style lang="scss" scoped>
 header {
     background: #313132;
     position: relative;
-    padding: .3rem 0;
+    padding: 0.3rem 0;
     nav {
         width: 68%;
         margin: 0 auto;

@@ -55,21 +55,6 @@
                 ></video>
             </div>
         </div>
-        <!-- <div class="watchultra_hardware">
-            <div class="child_wrap">
-                <p>
-                    Ready for Action. The new Action button gives you quick, physical control over a variety of functions. It’s customizable and can
-                    do things like control a workout, mark a Compass Waypoint, or begin a dive. Just like you, it’s full of potential.
-                </p>
-
-                <div class="watchultra_hardware_magic">
-                    <div class="img">
-                        <img src="../assets/design_ready.jpeg" alt="" />
-                    </div>
-                </div>
-            </div>
-            <div ref="change" class="change"></div>
-        </div> -->
     </div>
 </template>
 
@@ -77,10 +62,8 @@
 import { ref } from "@vue/reactivity";
 import { onMounted } from "@vue/runtime-core";
 import { IO } from "../animation/observe";
-import gsap from "gsap";
 const dpd_vid = ref(null);
 const nightmode_vid = ref(null);
-
 onMounted(() => {
     IO(dpd_vid.value).then(() => {
         dpd_vid.value.play();
@@ -189,28 +172,5 @@ h1 {
             width: 35rem;
         }
     }
-    // &_hardware {
-    //     padding-top: 7rem;
-    //     &_magic {
-    //         width: 100%;
-    //         height: 30rem;
-    //         overflow-y: hidden;
-    //         .img {
-    //             width: 63rem;
-    //             margin: 0 auto;
-    //         }
-    //     }
-    //     .change {
-    //         background-color: $fadewhite;
-    //         height: 45rem;
-    //         width: 100%;
-    //         z-index: 20;
-    //         background-image: url(../assets/design_features_left_static.jpeg);
-    //         background-size: 60rem;
-    //         background-position: center bottom;
-    //         background-repeat: no-repeat;
-    //         background-attachment: fixed;
-    //     }
-    // }
 }
 </style>
