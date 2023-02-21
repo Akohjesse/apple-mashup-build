@@ -68,7 +68,7 @@ onMounted(() => {
             document.querySelectorAll(".ipad_vid_animtext h2").forEach((e) => {
                 e.style.display = "block";
             });
-        }, 4000);
+        }, 3000);
     });
 });
 </script>

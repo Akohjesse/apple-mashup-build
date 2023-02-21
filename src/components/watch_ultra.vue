@@ -4,25 +4,23 @@
             <div class="watchultra_landing_logo img mg_au">
                 <img src="../assets/logo_watch_ultra.png" alt="" />
             </div>
-            <h2>Adventure awaits.</h2>
-            <p class="mg_au">
+            <h2 data-animation="header">Adventure awaits.</h2>
+            <p data-animation="header" class="mg_au">
                 Meet the most rugged and capable Apple Watch ever. With a robust titanium case, precision dual-frequency GPS, up to 36 hours of
                 battery life, the freedom of cellular, and three specialized bands made for athletes and adventurers of all kinds.
             </p>
-            <div class="links">
-                <a href="">Watch the film</a>
-                <a href="">Watch the event</a>
-            </div>
             <div class="watchultra_landing_hero_img mg_au">
-                <img src="../assets/hero_watch_ultra_large_2x.jpeg" alt="" />
+                <img data-scroll data-scroll-speed="-1" data-scroll-delay="1" src="../assets/hero_watch_ultra_large_2x.jpeg" alt="" />
             </div>
         </div>
         <div class="watchultra_dpd">
             <div class="watchultra_dpd_txt child_wrap">
-                <p>Design</p>
-                <h1>Pioneering engineering.</h1>
+                <p data-animation="header">Design</p>
+                <h1 data-animation="header">Pioneering engineering.</h1>
             </div>
             <video
+                data-scroll
+                data-scroll-speed="-1"
                 ref="dpd_vid"
                 autoplay
                 src="https://www.apple.com/105/media/us/apple-watch-ultra/2022/4d9e62e1-fe94-4bb9-abbe-0b8c9626a304/anim/light-pass/medium_2x.mp4"
@@ -30,19 +28,19 @@
         </div>
         <div class="watchultra_tolove child_wrap">
             <div class="watchultra_tolove_txt">
-                <p>Even more to discover</p>
-                <h1>Everything to love about Apple Watch.</h1>
-                <p class="c_gray">
+                <p data-animation="header">Even more to discover</p>
+                <h1 data-animation="header">Everything to love about Apple Watch.</h1>
+                <p data-animation="header" class="c_gray">
                     With features that help you stay healthy, safe, and connected, the watch that pushes limits is also one you can wear every day.
                 </p>
             </div>
-            <div data-scroll-speed="3" data-scroll class="img mg_au">
+            <div data-scroll-speed="4" data-scroll class="img mg_au">
                 <img src="../assets/everything_hero.jpeg" alt="" />
             </div>
         </div>
         <div class="watchultra_nightmode">
             <div class="watchultra_nightmode_wrap child_wrap">
-                <p>
+                <p data-animation="fade">
                     The biggest and brightest Apple Watch display. The Always‑On Retina display is 2000 nits at its peak and twice as bright as any
                     other Apple Watch. The bigger display provides more room for workout metrics and detail‑packed watch faces. The Wayfinder face
                     lets you rotate the Digital Crown to activate
@@ -94,6 +92,7 @@ h1 {
     &_landing {
         padding-top: 3rem;
         text-align: center;
+        overflow: hidden;
         @include flex_col(1rem);
         &_logo {
             width: toRem(197);
@@ -108,14 +107,7 @@ h1 {
             margin-bottom: 1.5rem;
             font-weight: 600;
             font-size: toRem(24);
-        }
-        .links {
-            @include flex(center, center, 2rem);
-            a {
-                color: black;
-                font-size: toRem(24);
-                font-weight: 600;
-            }
+            color: $blacktxt;
         }
         &_hero_img {
             width: 100%;
@@ -125,6 +117,7 @@ h1 {
     &_dpd {
         background: $fadewhite;
         width: 100%;
+        overflow: hidden;
         padding-top: 6rem;
         @include flex_col(8rem);
         &_txt {

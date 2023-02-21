@@ -5,6 +5,13 @@
     color: #bf4800 !important;
     font-size: 10px !important;
 }
+span.word_wrap {
+    overflow: hidden;
+    display: inline-block;
+}
+[data-animation="header"] span.word {
+    overflow-y: hidden;
+}
 .label-new {
     border: 1px #f56300 solid;
     color: #f56300;

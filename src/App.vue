@@ -7,8 +7,10 @@ import Header from "./components/header.vue";
 import ipad from "./components/ipad.vue";
 import LocomotiveScroll from "locomotive-scroll";
 import { onMounted } from "vue";
+import { split } from "./animation/text";
 
 onMounted(() => {
+    split();
     const scroll = new LocomotiveScroll({
         el: document.querySelector("[data-scroll-container]"),
         smooth: true,
@@ -25,9 +27,10 @@ onMounted(() => {
     <div class="apple_mashup">
         <Header />
         <ipad></ipad>
-        <SE />
+
         <Watch_ultra />
         <airpods2></airpods2>
+        <SE />
         <pencil></pencil>
     </div>
 </template>

@@ -2,24 +2,24 @@
     <div class="applePencil">
         <div class="applePencil_Jot">
             <div class="txt">
-                <h2>Dream it up. Jot it down.</h2>
-                <p>
+                <h2 data-animation="header">Dream it up. Jot it down.</h2>
+                <p data-animation="paragraph">
                     Apple Pencil sets the standard for how drawing, note‑taking, and marking up documents should feel — intuitive, precise, and
                     magical. And on iPad Pro, Apple Pencil hover shows you exactly where your Apple Pencil will touch down on your display, so you can
                     write, sketch, and illustrate with even greater precision.
                 </p>
             </div>
             <div class="img mg_au">
-                <img data-scroll-speed="3" data-scroll-delay="1" data-scroll src="../assets/apple_pencil_hero.png" alt="" />
+                <img data-scroll-speed="1" data-scroll-delay="1" data-scroll src="../assets/apple_pencil_hero.png" alt="" />
             </div>
         </div>
         <div class="applePencil_find">
             <div class="applePencil_find_wrap child_wrap">
-                <h2 class="ta_center mg_au">Find the right Apple Pencil for your iPad.</h2>
+                <h2 class="ta_center mg_au" data-animation="header">Find the right Apple Pencil for your iPad.</h2>
                 <div class="applePencil_find_wrap_pencil_comp">
                     <div class="left">
                         <div class="sub">
-                            <h3>Apple pencil</h3>
+                            <h3 data-animation="header">Apple pencil</h3>
                             ]
 
                             <p>2nd generation</p>
@@ -27,17 +27,17 @@
                             <button>Buy</button>
                         </div>
                         <div class="pencil_pros">
-                            <p>Wireless pairing and charging</p>
-                            <p>Attaches magnetically</p>
-                            <p>Double-tap to change tools</p>
-                            <p>Pixel-perfect precision</p>
-                            <p>Tilt and pressure sensitivity</p>
-                            <p>Imperceptible lag</p>
-                            <p>Free engraving</p>
+                            <p data-animation="paragraph">Wireless pairing and charging</p>
+                            <p data-animation="paragraph">Attaches magnetically</p>
+                            <p data-animation="paragraph">Double-tap to change tools</p>
+                            <p data-animation="paragraph">Pixel-perfect precision</p>
+                            <p data-animation="paragraph">Tilt and pressure sensitivity</p>
+                            <p data-animation="paragraph">Imperceptible lag</p>
+                            <p data-animation="paragraph">Free engraving</p>
                         </div>
                         <div class="compat">
-                            <p><b>Compatible With</b></p>
-                            <div class="compat_ipad">
+                            <p data-animation="header"><b>Compatible With</b></p>
+                            <div class="compat_ipad" data-animation="fade">
                                 <img src="../assets/icon_ipad_pro_family.png" alt="" />
                                 <span>
                                     <b>iPad Pro 12.9-inch</b>
@@ -45,7 +45,7 @@
                                     3rd, 4th, 5th, and 6th generation
                                 </span>
                             </div>
-                            <div class="compat_ipad">
+                            <div class="compat_ipad" data-animation="fade">
                                 <img src="../assets/icon_ipad_air.png" alt="" />
                                 <span>
                                     <b>iPad Air</b>
@@ -53,7 +53,7 @@
                                     4th and 5th generation
                                 </span>
                             </div>
-                            <div class="compat_ipad">
+                            <div class="compat_ipad" data-animation="fade">
                                 <img src="../assets/icon_ipad_mini.png" alt="" />
                                 <span>
                                     <b>iPad mini</b>
@@ -82,8 +82,27 @@
                 </div>
             </div>
         </div>
+        <div class="applePencil_video">
+            <div class="applePencil_video_txt child_wrap">
+                <h3 data-animation="header">Apple Pencil hover</h3>
+                <p data-animation="paragraph">
+                    Apple Pencil hover shows you exactly where your Apple Pencil will touch down on your display. So you can write, sketch, and
+                    illustrate with even greater precision. Watch apps and widgets expand on the Home Screen as you move over them. Preview your mark
+                    before you make it. See how your watercolors mix before you paint. Apple Pencil hover makes everything you do with Apple Pencil
+                    even more effortless.*
+                </p>
+            </div>
+            <div class="applePencil_video_vid">
+                <video
+                    autoplay
+                    muted
+                    src="https://www.apple.com/105/media/us/apple-pencil/2022/eb402cc7-cda5-47cf-9375-06572de3fbb9/anim/hover/large_2x.mp4"
+                ></video>
+            </div>
+        </div>
         <div class="applePencil_art">
-            <img data-scroll data-scroll-speed="4" data-scroll-delay="1" src="../assets/apple_pencil_1st_gen_art.jpeg" alt="" />
+            <img data-scroll data-scroll-speed="1" src="../assets/apps_hero__fl80ky4vt2qi_large_2x.jpg" alt="" />
+            <img data-scroll data-scroll-speed="-2" data-scroll-delay="1" src="../assets/apple_pencil_1st_gen_art.jpeg" alt="" />
         </div>
     </div>
 </template>
@@ -193,6 +212,39 @@
                 }
             }
         }
+    }
+    &_video {
+        padding: 3rem;
+        @include flex_col(3rem);
+        &_txt {
+            @include flex_col(1rem);
+            text-align: center;
+            h3 {
+                color: $blacktxt;
+                font-size: toRem(32);
+                font-weight: 500;
+            }
+            p {
+                font-weight: 300;
+                font-size: toRem(18);
+                line-height: 1.7rem;
+                font-weight: 300;
+                letter-spacing: -0.012em;
+                width: 78%;
+                margin: 0 auto;
+            }
+        }
+        &_vid {
+            width: 95%;
+            margin: 0 auto;
+            video {
+                width: 100%;
+                border-radius: 2rem;
+            }
+        }
+    }
+    &_art {
+        padding-top: 3rem;
     }
 }
 </style>
