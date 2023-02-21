@@ -9,15 +9,15 @@ import LocomotiveScroll from "locomotive-scroll";
 import { onMounted } from "vue";
 
 onMounted(() => {
-    const locoScroll = new LocomotiveScroll({
+    const scroll = new LocomotiveScroll({
         el: document.querySelector("[data-scroll-container]"),
         smooth: true,
         lerp: 0.07,
     });
 
     setTimeout(() => {
-        locoScroll.update();
-    }, 500);
+        scroll.update();
+    }, 1000);
 });
 </script>
 

@@ -1,6 +1,6 @@
 <template>
     <div class="ipad">
-        <div class="ipad_vid">
+        <div class="ipad_vid" data-scroll-sticky data-scroll data-scroll-target=".ipad">
             <video
                 autoplay
                 muted
@@ -16,76 +16,83 @@
                     Supercharged by the <br />
                     Apple M1 chip.
                 </h2>
-                <h2 class="qwe">Blazing-fast 5G.</h2>
-                <h2 class="qwe">Five gorgeous colors.</h2>
             </div>
         </div>
     </div>
 </template>
 
-<!-- <script setup>
+<script setup>
 import { onMounted } from "@vue/runtime-core";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-    const item = gsap.utils.toArray(".ipad_vid_animtext .qwe");
-
-    gsap.set(item, {
-        autoAlpha: 0,
-        y: 100,
-    });
-    gsap.to(item, {
-        autoAlpha: 1,
-        duration: 1,
-        y: 0,
-        stagger: 1,
-        ease: "ease-in",
-        scrollTrigger: {
-            trigger: ".ipad_vid",
-            start: "-=20",
-            scrub: true,
-            pin: "body",
-            toggleActions: "play play reverse reverse",
-            end: "+=500",
-        },
-        onComplete: () => {
-            gsap.to(item, {
-                y: -200,
-                autoAlpha: 0,
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                gsap.set(entry.target, {
+                    autoAlpha: 0,
+                    y: 500,
+                });
+                if (entry.isIntersecting) {
+                    gsap.to(entry.target, {
+                        y: 0,
+                        autoAlpha: 1,
+                        duration: 1,
+                        stagger: 1,
+                    });
+                    observer.unobserve(entry.target);
+                }
             });
         },
+        {
+            threshold: 0.5,
+            rootMargin: "-40px",
+        }
+    );
+
+    let texts = gsap.utils.toArray(" .qwe");
+    texts.forEach((u) => {
+        observer.observe(u);
+
+        setTimeout(() => {
+            gsap.to(u, {
+                y: -200,
+                autoAlpha: 0,
+                duration: 1,
+            });
+            document.querySelector(".ipad_vid_animtext h1").style.display = "none";
+
+            document.querySelectorAll(".ipad_vid_animtext h2").forEach((e) => {
+                e.style.display = "block";
+            });
+        }, 2000);
     });
 });
-</script> -->
+</script>
 
 <style lang="scss" scoped>
 .ipad {
     &_vid {
-        position: relative;
         width: 100%;
-        height: 100vh;
         video {
             width: 100%;
         }
         &_animtext {
-            @include flex_col(3rem);
             position: absolute;
             width: 100%;
-            top: 5rem;
+            top: 20rem;
             text-align: center;
             h1 {
                 background-image: linear-gradient(129deg, #dc79ff, #256bfa);
-                font-size: toRem(81);
+                font-size: toRem(90);
                 -webkit-text-fill-color: transparent;
                 -webkit-background-clip: text;
             }
             h2 {
                 color: $fadewhite;
-                font-size: toRem(70);
+                font-size: toRem(80);
                 font-weight: 500;
+                display: none;
             }
         }
     }
